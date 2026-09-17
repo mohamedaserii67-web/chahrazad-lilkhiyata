@@ -291,6 +291,88 @@ footer {
 .copy {
     font-size: 0.85rem;
 }
-.copy {
-    font-size: 0.85rem;
+/* ===== Responsive Design لجميع الأجهزة ===== */
+
+/* الأجهزة المتوسطة (التابلت واللوحات الرقمية) */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .main-container {
+        padding: 0 15px;
+    }
+}
+
+/* الهواتف الذكية (الشاشات الصغيرة) */
+@media (max-width: 768px) {
+    /* Navbar تتجمع عمودياً */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* قسم الواجهة (Hero) */
+    .hero {
+        height: 320px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    /* العناوين والجريد (Grids) */
+    .main-container h2 {
+        font-size: 1.5rem;
+        padding-right: 10px;
+        border-right-width: 4px;
+    }
+
+    .services-grid, .recipe-grid {
+        grid-template-columns: 1fr; /* كارت وحدة في السطر للهواتف */
+        gap: 20px;
+    }
+
+    .recipe-img {
+        height: 240px;
+    }
+
+    /* الـ Footer */
+    footer {
+        padding: 30px 15px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+/* الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-links {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
 }
