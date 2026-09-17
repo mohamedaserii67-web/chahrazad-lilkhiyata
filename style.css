@@ -375,4 +375,71 @@ footer {
         gap: 10px;
         font-size: 0.8rem;
     }
+}/* ===== Responsive Design لجميع الأجهزة وتثبيت الواتساب لتحت في الجنب ===== */
+
+@media (max-width: 768px) {
+    /* الهيدر كيتبدل */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* تحويل زر الواتساب إلى زر عائم (Floating) في أسفل الشاشة على الجنب */
+    .navbar .contact-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* تقدر تبدلها بـ right: 20px على حسب الجنب اللي بغيتي */
+        z-index: 9999;
+        margin: 0;
+        display: block !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        border-radius: 50px;
+        animation: pulse 2s infinite;
+    }
+
+    .navbar .contact-btn a {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    /* قسم الواجهة (Hero) */
+    .hero {
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-container h2 {
+        font-size: 1.4rem;
+        padding-right: 10px;
+        border-right-width: 4px;
+    }
+
+    .services-grid, .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .recipe-img {
+        height: 240px;
+    }
+
+    footer {
+        padding: 30px 15px 70px 15px; /* زيادة المساحة التحتانية باش مايغطيهاش الزر */
+    }
 }
